@@ -17,7 +17,7 @@ var common_1 = require("@nestjs/common");
 var visitor_service_1 = require("./visitor.service");
 var swagger_1 = require("@nestjs/swagger");
 var visitor_dto_1 = require("./visitor.dto");
-var VisitorController = /** @class */ (function () {
+var VisitorController = exports.VisitorController = /** @class */ (function () {
     function VisitorController(visitorService) {
         this.visitorService = visitorService;
         this.logger = new common_1.Logger('VisitorController');
@@ -43,60 +43,60 @@ var VisitorController = /** @class */ (function () {
         return this.visitorService.deleteVisitorById(id);
     };
     __decorate([
-        common_1.Post(),
-        common_1.UsePipes(new common_1.ValidationPipe()),
-        swagger_1.ApiBody({ type: visitor_dto_1.VisitorDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)(),
+        (0, common_1.UsePipes)(new common_1.ValidationPipe()),
+        (0, swagger_1.ApiBody)({ type: visitor_dto_1.VisitorDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], VisitorController.prototype, "createVisitor", null);
     __decorate([
-        common_1.Get(),
+        (0, common_1.Get)(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
     ], VisitorController.prototype, "showAllVisitor", null);
     __decorate([
-        common_1.Get('/resident/:id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Get)('/resident/:id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [String]),
         __metadata("design:returntype", void 0)
     ], VisitorController.prototype, "getVisitorByResidentId", null);
     __decorate([
-        common_1.Get(':id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Get)(':id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], VisitorController.prototype, "getVisitorById", null);
     __decorate([
-        common_1.Put(':id'),
-        common_1.UsePipes(new common_1.ValidationPipe()),
-        swagger_1.ApiParam({ name: 'id' }),
-        swagger_1.ApiBody({ type: visitor_dto_1.VisitorDTO }),
-        __param(0, common_1.Param('id')), __param(1, common_1.Body()),
+        (0, common_1.Put)(':id'),
+        (0, common_1.UsePipes)(new common_1.ValidationPipe()),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        (0, swagger_1.ApiBody)({ type: visitor_dto_1.VisitorDTO }),
+        __param(0, (0, common_1.Param)('id')),
+        __param(1, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object, Object]),
         __metadata("design:returntype", void 0)
     ], VisitorController.prototype, "updateVisitorById", null);
     __decorate([
-        common_1.Delete(':id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Delete)(':id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], VisitorController.prototype, "deleteVisitorById", null);
     VisitorController = __decorate([
-        swagger_1.ApiTags('visitor'),
-        common_1.Controller('visitor'),
+        (0, swagger_1.ApiTags)('visitor'),
+        (0, common_1.Controller)('visitor'),
         __metadata("design:paramtypes", [visitor_service_1.VisitorService])
     ], VisitorController);
     return VisitorController;
 }());
-exports.VisitorController = VisitorController;
 //# sourceMappingURL=visitor.controller.js.map

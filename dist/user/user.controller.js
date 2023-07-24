@@ -18,7 +18,7 @@ var user_service_1 = require("./user.service");
 var user_dto_1 = require("./user.dto");
 var validation_pipe_1 = require("./../shared/validation.pipe");
 var swagger_1 = require("@nestjs/swagger");
-var UserController = /** @class */ (function () {
+var UserController = exports.UserController = /** @class */ (function () {
     function UserController(userService) {
         this.userService = userService;
         this.logger = new common_1.Logger('UserController');
@@ -40,52 +40,52 @@ var UserController = /** @class */ (function () {
         return this.userService.deleteUser(id);
     };
     __decorate([
-        common_1.Get(),
+        (0, common_1.Get)(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
     ], UserController.prototype, "showAllUsers", null);
     __decorate([
-        common_1.Post('login'),
-        common_1.UsePipes(new validation_pipe_1.ValidationPipe()),
-        swagger_1.ApiBody({ type: user_dto_1.LoginDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)('login'),
+        (0, common_1.UsePipes)(new validation_pipe_1.ValidationPipe()),
+        (0, swagger_1.ApiBody)({ type: user_dto_1.LoginDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [user_dto_1.LoginDTO]),
         __metadata("design:returntype", void 0)
     ], UserController.prototype, "login", null);
     __decorate([
-        common_1.Post('register'),
-        swagger_1.ApiBody({ type: user_dto_1.UserDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)('register'),
+        (0, swagger_1.ApiBody)({ type: user_dto_1.UserDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [user_dto_1.UserDTO]),
         __metadata("design:returntype", void 0)
     ], UserController.prototype, "register", null);
     __decorate([
-        common_1.Put(':id'),
-        common_1.UsePipes(new validation_pipe_1.ValidationPipe()),
-        swagger_1.ApiParam({ name: 'id' }),
-        swagger_1.ApiBody({ type: user_dto_1.UserUP }),
-        __param(0, common_1.Param('id')), __param(1, common_1.Body()),
+        (0, common_1.Put)(':id'),
+        (0, common_1.UsePipes)(new validation_pipe_1.ValidationPipe()),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        (0, swagger_1.ApiBody)({ type: user_dto_1.UserUP }),
+        __param(0, (0, common_1.Param)('id')),
+        __param(1, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object, user_dto_1.UserUP]),
         __metadata("design:returntype", void 0)
     ], UserController.prototype, "updateRegister", null);
     __decorate([
-        common_1.Delete(':id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Delete)(':id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], UserController.prototype, "deleteUser", null);
     UserController = __decorate([
-        swagger_1.ApiTags('users'),
-        common_1.Controller('users'),
+        (0, swagger_1.ApiTags)('users'),
+        (0, common_1.Controller)('users'),
         __metadata("design:paramtypes", [user_service_1.UserService])
     ], UserController);
     return UserController;
 }());
-exports.UserController = UserController;
 //# sourceMappingURL=user.controller.js.map

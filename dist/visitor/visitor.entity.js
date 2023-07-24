@@ -11,45 +11,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.VisitorEntity = void 0;
 var typeorm_1 = require("typeorm");
-var VisitorEntity = /** @class */ (function () {
+var VisitorEntity = exports.VisitorEntity = /** @class */ (function () {
     function VisitorEntity() {
     }
     __decorate([
-        typeorm_1.PrimaryGeneratedColumn('uuid'),
+        (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
         __metadata("design:type", String)
     ], VisitorEntity.prototype, "id", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], VisitorEntity.prototype, "name", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], VisitorEntity.prototype, "discription", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", Boolean)
     ], VisitorEntity.prototype, "checkin", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", Date)
     ], VisitorEntity.prototype, "checkinDate", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", Boolean)
     ], VisitorEntity.prototype, "checkout", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", Date)
     ], VisitorEntity.prototype, "checkoutDate", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], VisitorEntity.prototype, "residentId", void 0);
     VisitorEntity = __decorate([
-        typeorm_1.Entity('visitor')
+        (0, typeorm_1.Entity)('visitor')
     ], VisitorEntity);
     return VisitorEntity;
 }());
-exports.VisitorEntity = VisitorEntity;
 //# sourceMappingURL=visitor.entity.js.map

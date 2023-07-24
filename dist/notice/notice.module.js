@@ -12,11 +12,11 @@ var notice_service_1 = require("./notice.service");
 var notice_controller_1 = require("./notice.controller");
 var notice_entity_1 = require("./notice.entity");
 var typeorm_1 = require("@nestjs/typeorm");
-var NoticeModule = /** @class */ (function () {
+var NoticeModule = exports.NoticeModule = /** @class */ (function () {
     function NoticeModule() {
     }
     NoticeModule = __decorate([
-        common_1.Module({
+        (0, common_1.Module)({
             imports: [typeorm_1.TypeOrmModule.forFeature([notice_entity_1.NoticeEntity])],
             controllers: [notice_controller_1.NoticeController],
             providers: [notice_service_1.NoticeService],
@@ -24,5 +24,4 @@ var NoticeModule = /** @class */ (function () {
     ], NoticeModule);
     return NoticeModule;
 }());
-exports.NoticeModule = NoticeModule;
 //# sourceMappingURL=notice.module.js.map

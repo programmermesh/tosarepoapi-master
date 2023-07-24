@@ -12,40 +12,39 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.LandlordDTO = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var LandlordDTO = /** @class */ (function () {
+var LandlordDTO = exports.LandlordDTO = /** @class */ (function () {
     function LandlordDTO() {
     }
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], LandlordDTO.prototype, "lastname", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], LandlordDTO.prototype, "other_names", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], LandlordDTO.prototype, "gender", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], LandlordDTO.prototype, "address", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], LandlordDTO.prototype, "phone1", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], LandlordDTO.prototype, "phone2", void 0);
     return LandlordDTO;
 }());
-exports.LandlordDTO = LandlordDTO;
 //# sourceMappingURL=landloard.dto.js.map

@@ -12,50 +12,49 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.VisitorDTO = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var VisitorDTO = /** @class */ (function () {
+var VisitorDTO = exports.VisitorDTO = /** @class */ (function () {
     function VisitorDTO() {
     }
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], VisitorDTO.prototype, "name", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], VisitorDTO.prototype, "discription", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], VisitorDTO.prototype, "residentId", void 0);
     __decorate([
-        swagger_1.ApiProperty({
+        (0, swagger_1.ApiProperty)({
             enum: ['false', 'true'],
             default: 'false',
         }),
-        class_validator_1.IsBoolean(),
+        (0, class_validator_1.IsBoolean)(),
         __metadata("design:type", Boolean)
     ], VisitorDTO.prototype, "checkin", void 0);
     __decorate([
-        swagger_1.ApiProperty({
+        (0, swagger_1.ApiProperty)({
             enum: ['false', 'true'],
             default: 'false',
         }),
-        class_validator_1.IsDate(),
+        (0, class_validator_1.IsDate)(),
         __metadata("design:type", Boolean)
     ], VisitorDTO.prototype, "checkout", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
+        (0, swagger_1.ApiProperty)(),
         __metadata("design:type", Date)
     ], VisitorDTO.prototype, "checkinDate", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsDate(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsDate)(),
         __metadata("design:type", Date)
     ], VisitorDTO.prototype, "checkoutDate", void 0);
     return VisitorDTO;
 }());
-exports.VisitorDTO = VisitorDTO;
 //# sourceMappingURL=visitor.dto.js.map

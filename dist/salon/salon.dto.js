@@ -12,25 +12,24 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SalonDTO = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var SalonDTO = /** @class */ (function () {
+var SalonDTO = exports.SalonDTO = /** @class */ (function () {
     function SalonDTO() {
     }
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], SalonDTO.prototype, "hairType", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], SalonDTO.prototype, "gender", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsInt(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsInt)(),
         __metadata("design:type", Number)
     ], SalonDTO.prototype, "amount", void 0);
     return SalonDTO;
 }());
-exports.SalonDTO = SalonDTO;
 //# sourceMappingURL=salon.dto.js.map

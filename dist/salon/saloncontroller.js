@@ -19,7 +19,7 @@ var salon_dto_1 = require("./salon.dto");
 var swagger_1 = require("@nestjs/swagger");
 var validation_pipe_1 = require("../shared/validation.pipe");
 var hairstyle_dto_1 = require("../shared/hairstyle.dto");
-var SalonController = /** @class */ (function () {
+var SalonController = exports.SalonController = /** @class */ (function () {
     function SalonController(salonService) {
         this.salonService = salonService;
         this.logger = new common_1.Logger('SalonController');
@@ -43,52 +43,52 @@ var SalonController = /** @class */ (function () {
         return this.salonService.deleteHairstyleById(id);
     };
     __decorate([
-        common_1.Post(),
-        common_1.UsePipes(new validation_pipe_1.ValidationPipe()),
-        swagger_1.ApiBody({ type: salon_dto_1.SalonDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)(),
+        (0, common_1.UsePipes)(new validation_pipe_1.ValidationPipe()),
+        (0, swagger_1.ApiBody)({ type: salon_dto_1.SalonDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [salon_dto_1.SalonDTO]),
         __metadata("design:returntype", void 0)
     ], SalonController.prototype, "addHairTypes", null);
     __decorate([
-        common_1.Get(),
+        (0, common_1.Get)(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
     ], SalonController.prototype, "showAllPayment", null);
     __decorate([
-        common_1.Post(':genderHairStyles'),
-        swagger_1.ApiBody({ type: hairstyle_dto_1.HairstyleDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)(':genderHairStyles'),
+        (0, swagger_1.ApiBody)({ type: hairstyle_dto_1.HairstyleDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [hairstyle_dto_1.HairstyleDTO]),
         __metadata("design:returntype", void 0)
     ], SalonController.prototype, "getHairStyleByGender", null);
     __decorate([
-        common_1.Put(':id'),
-        common_1.UsePipes(new validation_pipe_1.ValidationPipe()),
-        swagger_1.ApiParam({ name: 'id' }),
-        swagger_1.ApiBody({ type: salon_dto_1.SalonDTO }),
-        __param(0, common_1.Param('id')), __param(1, common_1.Body()),
+        (0, common_1.Put)(':id'),
+        (0, common_1.UsePipes)(new validation_pipe_1.ValidationPipe()),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        (0, swagger_1.ApiBody)({ type: salon_dto_1.SalonDTO }),
+        __param(0, (0, common_1.Param)('id')),
+        __param(1, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object, Object]),
         __metadata("design:returntype", void 0)
     ], SalonController.prototype, "updateHairstyleById", null);
     __decorate([
-        common_1.Delete(':id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Delete)(':id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], SalonController.prototype, "deleteHairstyleById", null);
     SalonController = __decorate([
-        swagger_1.ApiTags('salon'),
-        common_1.Controller('salon'),
+        (0, swagger_1.ApiTags)('salon'),
+        (0, common_1.Controller)('salon'),
         __metadata("design:paramtypes", [salon_service_1.SalonService])
     ], SalonController);
     return SalonController;
 }());
-exports.SalonController = SalonController;
 //# sourceMappingURL=saloncontroller.js.map

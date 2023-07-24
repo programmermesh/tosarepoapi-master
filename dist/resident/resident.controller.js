@@ -18,7 +18,7 @@ var resident_service_1 = require("./resident.service");
 var resident_dto_1 = require("./resident.dto");
 var swagger_1 = require("@nestjs/swagger");
 var validation_pipe_1 = require("../shared/validation.pipe");
-var ResidentController = /** @class */ (function () {
+var ResidentController = exports.ResidentController = /** @class */ (function () {
     function ResidentController(residentService) {
         this.residentService = residentService;
         this.logger = new common_1.Logger('ResidentController');
@@ -46,68 +46,68 @@ var ResidentController = /** @class */ (function () {
         return this.residentService.deleteResidentById(id);
     };
     __decorate([
-        common_1.Get(),
+        (0, common_1.Get)(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
     ], ResidentController.prototype, "showAllResident", null);
     __decorate([
-        common_1.Post('/birthday/:dob'),
-        swagger_1.ApiBody({ type: resident_dto_1.BirthDayDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)('/birthday/:dob'),
+        (0, swagger_1.ApiBody)({ type: resident_dto_1.BirthDayDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], ResidentController.prototype, "birthDayCelebration", null);
     __decorate([
-        common_1.Post('login'),
-        common_1.UsePipes(new validation_pipe_1.ValidationPipe()),
-        swagger_1.ApiBody({ type: resident_dto_1.LoginDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)('login'),
+        (0, common_1.UsePipes)(new validation_pipe_1.ValidationPipe()),
+        (0, swagger_1.ApiBody)({ type: resident_dto_1.LoginDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [resident_dto_1.LoginDTO]),
         __metadata("design:returntype", void 0)
     ], ResidentController.prototype, "login", null);
     __decorate([
-        common_1.Post('register'),
-        swagger_1.ApiBody({ type: resident_dto_1.ResidentDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)('register'),
+        (0, swagger_1.ApiBody)({ type: resident_dto_1.ResidentDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [resident_dto_1.ResidentDTO]),
         __metadata("design:returntype", void 0)
     ], ResidentController.prototype, "register", null);
     __decorate([
-        common_1.Get(':id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Get)(':id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], ResidentController.prototype, "getResidentById", null);
     __decorate([
-        common_1.Put(':id'),
-        common_1.UsePipes(new validation_pipe_1.ValidationPipe()),
-        swagger_1.ApiParam({ name: 'id' }),
-        swagger_1.ApiBody({ type: resident_dto_1.ResidentDTO }),
-        __param(0, common_1.Param('id')), __param(1, common_1.Body()),
+        (0, common_1.Put)(':id'),
+        (0, common_1.UsePipes)(new validation_pipe_1.ValidationPipe()),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        (0, swagger_1.ApiBody)({ type: resident_dto_1.ResidentDTO }),
+        __param(0, (0, common_1.Param)('id')),
+        __param(1, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object, Object]),
         __metadata("design:returntype", void 0)
     ], ResidentController.prototype, "updateResidentById", null);
     __decorate([
-        common_1.Delete(':id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Delete)(':id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], ResidentController.prototype, "deleteResidentById", null);
     ResidentController = __decorate([
-        swagger_1.ApiTags('resident'),
-        common_1.Controller('resident'),
+        (0, swagger_1.ApiTags)('resident'),
+        (0, common_1.Controller)('resident'),
         __metadata("design:paramtypes", [resident_service_1.ResidentService])
     ], ResidentController);
     return ResidentController;
 }());
-exports.ResidentController = ResidentController;
 //# sourceMappingURL=resident.controller.js.map

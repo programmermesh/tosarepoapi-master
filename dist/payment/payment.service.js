@@ -26,7 +26,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -55,7 +55,7 @@ var payment_entity_1 = require("./payment.entity");
 var typeorm_2 = require("@nestjs/typeorm");
 var pendingPayment_entity_1 = require("../pendingPayment/pendingPayment.entity");
 var pendingPayment_dto_1 = require("../pendingPayment/pendingPayment.dto");
-var PaymentService = /** @class */ (function () {
+var PaymentService = exports.PaymentService = /** @class */ (function () {
     function PaymentService(paymentRepository, PendingPaymentRepository) {
         this.paymentRepository = paymentRepository;
         this.PendingPaymentRepository = PendingPaymentRepository;
@@ -264,13 +264,12 @@ var PaymentService = /** @class */ (function () {
         });
     };
     PaymentService = __decorate([
-        common_1.Injectable(),
-        __param(0, typeorm_2.InjectRepository(payment_entity_1.PaymentEntity)),
-        __param(1, typeorm_2.InjectRepository(pendingPayment_entity_1.PendingPaymentEntity)),
+        (0, common_1.Injectable)(),
+        __param(0, (0, typeorm_2.InjectRepository)(payment_entity_1.PaymentEntity)),
+        __param(1, (0, typeorm_2.InjectRepository)(pendingPayment_entity_1.PendingPaymentEntity)),
         __metadata("design:paramtypes", [typeorm_1.Repository,
             typeorm_1.Repository])
     ], PaymentService);
     return PaymentService;
 }());
-exports.PaymentService = PaymentService;
 //# sourceMappingURL=payment.service.js.map

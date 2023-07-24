@@ -26,7 +26,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -54,7 +54,7 @@ var typeorm_1 = require("@nestjs/typeorm");
 var landloard_entity_1 = require("./landloard.entity");
 var typeorm_2 = require("typeorm");
 var resident_entity_1 = require("../resident/resident.entity");
-var LandlordService = /** @class */ (function () {
+var LandlordService = exports.LandlordService = /** @class */ (function () {
     function LandlordService(landlordRepository, residentRepository) {
         this.landlordRepository = landlordRepository;
         this.residentRepository = residentRepository;
@@ -190,13 +190,12 @@ var LandlordService = /** @class */ (function () {
         });
     };
     LandlordService = __decorate([
-        common_1.Injectable(),
-        __param(0, typeorm_1.InjectRepository(landloard_entity_1.LandlordEntity)),
-        __param(1, typeorm_1.InjectRepository(resident_entity_1.ResidentEntity)),
+        (0, common_1.Injectable)(),
+        __param(0, (0, typeorm_1.InjectRepository)(landloard_entity_1.LandlordEntity)),
+        __param(1, (0, typeorm_1.InjectRepository)(resident_entity_1.ResidentEntity)),
         __metadata("design:paramtypes", [typeorm_2.Repository,
             typeorm_2.Repository])
     ], LandlordService);
     return LandlordService;
 }());
-exports.LandlordService = LandlordService;
 //# sourceMappingURL=landloard.service.js.map

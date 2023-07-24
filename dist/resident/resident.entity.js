@@ -1,7 +1,11 @@
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -42,7 +46,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -68,7 +72,7 @@ exports.ResidentEntity = void 0;
 var typeorm_1 = require("typeorm");
 var bcrypt = __importStar(require("bcryptjs"));
 var jwt = __importStar(require("jsonwebtoken"));
-var ResidentEntity = /** @class */ (function () {
+var ResidentEntity = exports.ResidentEntity = /** @class */ (function () {
     function ResidentEntity() {
     }
     ResidentEntity.prototype.hashPassword = function () {
@@ -87,8 +91,9 @@ var ResidentEntity = /** @class */ (function () {
         });
     };
     ResidentEntity.prototype.toResponseObject = function (showToken) {
+        var _a;
         if (showToken === void 0) { showToken = true; }
-        var _a = this, id = _a.id, username = _a.username, token = _a.token, lastname = _a.lastname, other_names = _a.other_names, gender = _a.gender, phone_number1 = _a.phone_number1, phone_number2 = _a.phone_number2, date_of_entry = _a.date_of_entry, dob = _a.dob, employment_status = _a.employment_status, profession = _a.profession, spouse_dob = _a.spouse_dob, spouseName = _a.spouseName, numberOfChildren = _a.numberOfChildren, childrenName = _a.childrenName, houseNumber = _a.houseNumber, houseType = _a.houseType, password = _a.password, type = _a.type, landlordId = _a.landlordId;
+        var id = (_a = this, _a.id), username = _a.username, token = _a.token, lastname = _a.lastname, other_names = _a.other_names, gender = _a.gender, phone_number1 = _a.phone_number1, phone_number2 = _a.phone_number2, date_of_entry = _a.date_of_entry, dob = _a.dob, employment_status = _a.employment_status, profession = _a.profession, spouse_dob = _a.spouse_dob, spouseName = _a.spouseName, numberOfChildren = _a.numberOfChildren, childrenName = _a.childrenName, houseNumber = _a.houseNumber, houseType = _a.houseType, password = _a.password, type = _a.type, landlordId = _a.landlordId;
         var responseObject = {
             id: id,
             username: username,
@@ -128,114 +133,114 @@ var ResidentEntity = /** @class */ (function () {
     };
     Object.defineProperty(ResidentEntity.prototype, "token", {
         get: function () {
-            var _a = this, id = _a.id, username = _a.username;
+            var _a;
+            var id = (_a = this, _a.id), username = _a.username;
             return jwt.sign({ id: id, username: username }, process.env.SECRET, { expiresIn: '7d' });
         },
         enumerable: false,
         configurable: true
     });
     __decorate([
-        typeorm_1.PrimaryGeneratedColumn('uuid'),
+        (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "id", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "lastname", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "other_names", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "gender", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "status", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "phone_number1", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "phone_number2", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "dob", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "employment_status", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "profession", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "date_of_entry", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "spouse_dob", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "spouseName", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", Number)
     ], ResidentEntity.prototype, "numberOfChildren", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "childrenName", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "houseNumber", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "nameOfLandLord", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "streetName", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "houseType", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "username", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "password", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "type", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ResidentEntity.prototype, "landlordId", void 0);
     __decorate([
-        typeorm_1.BeforeInsert(),
+        (0, typeorm_1.BeforeInsert)(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", Promise)
     ], ResidentEntity.prototype, "hashPassword", null);
     ResidentEntity = __decorate([
-        typeorm_1.Entity('resident')
+        (0, typeorm_1.Entity)('resident')
     ], ResidentEntity);
     return ResidentEntity;
 }());
-exports.ResidentEntity = ResidentEntity;
 //# sourceMappingURL=resident.entity.js.map

@@ -24,11 +24,11 @@ var pendingPayment_module_1 = require("./pendingPayment/pendingPayment.module");
 var expense_income_module_1 = require("./expense-income/expense-income.module");
 var landloard_module_1 = require("./landlord/landloard.module");
 var salon_module_1 = require("./salon/salon.module");
-var AppModule = /** @class */ (function () {
+var AppModule = exports.AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        common_1.Module({
+        (0, common_1.Module)({
             imports: [
                 typeorm_1.TypeOrmModule.forRoot(orm_config_1.config),
                 resident_module_1.ResidentModule,
@@ -54,5 +54,4 @@ var AppModule = /** @class */ (function () {
     ], AppModule);
     return AppModule;
 }());
-exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

@@ -12,40 +12,39 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ExpenseIncomeDTO = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var ExpenseIncomeDTO = /** @class */ (function () {
+var ExpenseIncomeDTO = exports.ExpenseIncomeDTO = /** @class */ (function () {
     function ExpenseIncomeDTO() {
     }
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], ExpenseIncomeDTO.prototype, "Name", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], ExpenseIncomeDTO.prototype, "description", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", Number)
     ], ExpenseIncomeDTO.prototype, "amount", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], ExpenseIncomeDTO.prototype, "month", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], ExpenseIncomeDTO.prototype, "year", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], ExpenseIncomeDTO.prototype, "type", void 0);
     return ExpenseIncomeDTO;
 }());
-exports.ExpenseIncomeDTO = ExpenseIncomeDTO;
 //# sourceMappingURL=expense-income.dto.js.map

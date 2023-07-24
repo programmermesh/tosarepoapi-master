@@ -12,11 +12,11 @@ var expense_income_service_1 = require("./expense-income.service");
 var expense_income_entity_1 = require("./expense-income.entity");
 var typeorm_1 = require("@nestjs/typeorm");
 var expense_income_controller_1 = require("./expense-income.controller");
-var ExpenseIncomeModule = /** @class */ (function () {
+var ExpenseIncomeModule = exports.ExpenseIncomeModule = /** @class */ (function () {
     function ExpenseIncomeModule() {
     }
     ExpenseIncomeModule = __decorate([
-        common_1.Module({
+        (0, common_1.Module)({
             imports: [typeorm_1.TypeOrmModule.forFeature([expense_income_entity_1.ExpenseIncomeEntity])],
             controllers: [expense_income_controller_1.ExpenseIncomeController],
             providers: [expense_income_service_1.ExpenseIncomeService],
@@ -24,5 +24,4 @@ var ExpenseIncomeModule = /** @class */ (function () {
     ], ExpenseIncomeModule);
     return ExpenseIncomeModule;
 }());
-exports.ExpenseIncomeModule = ExpenseIncomeModule;
 //# sourceMappingURL=expense-income.module.js.map

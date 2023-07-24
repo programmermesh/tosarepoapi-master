@@ -20,7 +20,7 @@ var swagger_1 = require("@nestjs/swagger");
 var validation_pipe_1 = require("../shared/validation.pipe");
 var paymentMonth_dto_1 = require("../shared/paymentMonth.dto");
 var paymentYear_dto_1 = require("../shared/paymentYear.dto");
-var PaymentController = /** @class */ (function () {
+var PaymentController = exports.PaymentController = /** @class */ (function () {
     function PaymentController(paymentService) {
         this.paymentService = paymentService;
         this.logger = new common_1.Logger('PaymentController');
@@ -51,67 +51,67 @@ var PaymentController = /** @class */ (function () {
         return this.paymentService.deletePaymentById(id);
     };
     __decorate([
-        common_1.Post('/approvePayment'),
-        swagger_1.ApiBody({ type: payment_dto_1.PaymentDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)('/approvePayment'),
+        (0, swagger_1.ApiBody)({ type: payment_dto_1.PaymentDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [payment_dto_1.PaymentDTO]),
         __metadata("design:returntype", void 0)
     ], PaymentController.prototype, "approvePayment", null);
     __decorate([
-        common_1.Get(),
+        (0, common_1.Get)(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
     ], PaymentController.prototype, "showAllPayment", null);
     __decorate([
-        common_1.Post('/payment/:id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Post)('/payment/:id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [String]),
         __metadata("design:returntype", void 0)
     ], PaymentController.prototype, "getPaymentByResidentId", null);
     __decorate([
-        common_1.Post('/month'),
-        swagger_1.ApiBody({ type: paymentMonth_dto_1.PaymentMonthDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)('/month'),
+        (0, swagger_1.ApiBody)({ type: paymentMonth_dto_1.PaymentMonthDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [paymentMonth_dto_1.PaymentMonthDTO]),
         __metadata("design:returntype", void 0)
     ], PaymentController.prototype, "getPaymentMonthYear", null);
     __decorate([
-        common_1.Post('/perannum'),
-        swagger_1.ApiBody({ type: paymentYear_dto_1.PaymentYearDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)('/perannum'),
+        (0, swagger_1.ApiBody)({ type: paymentYear_dto_1.PaymentYearDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [paymentYear_dto_1.PaymentYearDTO]),
         __metadata("design:returntype", void 0)
     ], PaymentController.prototype, "getPaymentYear", null);
     __decorate([
-        common_1.Put(':id'),
-        common_1.UsePipes(new validation_pipe_1.ValidationPipe()),
-        swagger_1.ApiParam({ name: 'id' }),
-        swagger_1.ApiBody({ type: payment_dto_1.PaymentDTO }),
-        __param(0, common_1.Param('id')), __param(1, common_1.Body()),
+        (0, common_1.Put)(':id'),
+        (0, common_1.UsePipes)(new validation_pipe_1.ValidationPipe()),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        (0, swagger_1.ApiBody)({ type: payment_dto_1.PaymentDTO }),
+        __param(0, (0, common_1.Param)('id')),
+        __param(1, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object, Object]),
         __metadata("design:returntype", void 0)
     ], PaymentController.prototype, "updateResidentById", null);
     __decorate([
-        common_1.Delete(':id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Delete)(':id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], PaymentController.prototype, "deletePaymentById", null);
     PaymentController = __decorate([
-        swagger_1.ApiTags('payment'),
-        common_1.Controller('payment'),
+        (0, swagger_1.ApiTags)('payment'),
+        (0, common_1.Controller)('payment'),
         __metadata("design:paramtypes", [payment_service_1.PaymentService])
     ], PaymentController);
     return PaymentController;
 }());
-exports.PaymentController = PaymentController;
 //# sourceMappingURL=payment.controller.js.map

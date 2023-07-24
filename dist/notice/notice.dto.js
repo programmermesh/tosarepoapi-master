@@ -12,20 +12,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.NoticeDTO = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var NoticeDTO = /** @class */ (function () {
+var NoticeDTO = exports.NoticeDTO = /** @class */ (function () {
     function NoticeDTO() {
     }
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], NoticeDTO.prototype, "title", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], NoticeDTO.prototype, "content", void 0);
     return NoticeDTO;
 }());
-exports.NoticeDTO = NoticeDTO;
 //# sourceMappingURL=notice.dto.js.map

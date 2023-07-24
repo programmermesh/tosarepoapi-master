@@ -11,65 +11,64 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PaymentEntity = void 0;
 var typeorm_1 = require("typeorm");
-var PaymentEntity = /** @class */ (function () {
+var PaymentEntity = exports.PaymentEntity = /** @class */ (function () {
     function PaymentEntity() {
     }
     __decorate([
-        typeorm_1.PrimaryGeneratedColumn('uuid'),
+        (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
         __metadata("design:type", String)
     ], PaymentEntity.prototype, "id", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], PaymentEntity.prototype, "pendingPaymentId", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], PaymentEntity.prototype, "month", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], PaymentEntity.prototype, "year", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], PaymentEntity.prototype, "status", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", Number)
     ], PaymentEntity.prototype, "amount", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], PaymentEntity.prototype, "levy", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], PaymentEntity.prototype, "houseType", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], PaymentEntity.prototype, "houseNumber", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], PaymentEntity.prototype, "fullName", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], PaymentEntity.prototype, "processed", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], PaymentEntity.prototype, "residentId", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], PaymentEntity.prototype, "file", void 0);
     PaymentEntity = __decorate([
-        typeorm_1.Entity('payment')
+        (0, typeorm_1.Entity)('payment')
     ], PaymentEntity);
     return PaymentEntity;
 }());
-exports.PaymentEntity = PaymentEntity;
 //# sourceMappingURL=payment.entity.js.map

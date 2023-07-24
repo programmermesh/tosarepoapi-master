@@ -12,15 +12,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.HairstyleDTO = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var HairstyleDTO = /** @class */ (function () {
+var HairstyleDTO = exports.HairstyleDTO = /** @class */ (function () {
     function HairstyleDTO() {
     }
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], HairstyleDTO.prototype, "gender", void 0);
     return HairstyleDTO;
 }());
-exports.HairstyleDTO = HairstyleDTO;
 //# sourceMappingURL=hairstyle.dto.js.map

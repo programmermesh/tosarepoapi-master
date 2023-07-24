@@ -26,7 +26,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -53,7 +53,7 @@ var common_1 = require("@nestjs/common");
 var expense_income_entity_1 = require("./expense-income.entity");
 var typeorm_1 = require("typeorm");
 var typeorm_2 = require("@nestjs/typeorm");
-var ExpenseIncomeService = /** @class */ (function () {
+var ExpenseIncomeService = exports.ExpenseIncomeService = /** @class */ (function () {
     function ExpenseIncomeService(expenseIncomeRepository) {
         this.expenseIncomeRepository = expenseIncomeRepository;
     }
@@ -205,11 +205,10 @@ var ExpenseIncomeService = /** @class */ (function () {
         });
     };
     ExpenseIncomeService = __decorate([
-        common_1.Injectable(),
-        __param(0, typeorm_2.InjectRepository(expense_income_entity_1.ExpenseIncomeEntity)),
+        (0, common_1.Injectable)(),
+        __param(0, (0, typeorm_2.InjectRepository)(expense_income_entity_1.ExpenseIncomeEntity)),
         __metadata("design:paramtypes", [typeorm_1.Repository])
     ], ExpenseIncomeService);
     return ExpenseIncomeService;
 }());
-exports.ExpenseIncomeService = ExpenseIncomeService;
 //# sourceMappingURL=expense-income.service.js.map

@@ -11,41 +11,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ExpenseIncomeEntity = void 0;
 var typeorm_1 = require("typeorm");
-var ExpenseIncomeEntity = /** @class */ (function () {
+var ExpenseIncomeEntity = exports.ExpenseIncomeEntity = /** @class */ (function () {
     function ExpenseIncomeEntity() {
     }
     __decorate([
-        typeorm_1.PrimaryGeneratedColumn('uuid'),
+        (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
         __metadata("design:type", String)
     ], ExpenseIncomeEntity.prototype, "id", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ExpenseIncomeEntity.prototype, "Name", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ExpenseIncomeEntity.prototype, "description", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", Number)
     ], ExpenseIncomeEntity.prototype, "amount", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ExpenseIncomeEntity.prototype, "month", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ExpenseIncomeEntity.prototype, "year", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], ExpenseIncomeEntity.prototype, "type", void 0);
     ExpenseIncomeEntity = __decorate([
-        typeorm_1.Entity('expense-income')
+        (0, typeorm_1.Entity)('expense-income')
     ], ExpenseIncomeEntity);
     return ExpenseIncomeEntity;
 }());
-exports.ExpenseIncomeEntity = ExpenseIncomeEntity;
 //# sourceMappingURL=expense-income.entity.js.map

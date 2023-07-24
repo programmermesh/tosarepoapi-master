@@ -11,41 +11,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LandlordEntity = void 0;
 var typeorm_1 = require("typeorm");
-var LandlordEntity = /** @class */ (function () {
+var LandlordEntity = exports.LandlordEntity = /** @class */ (function () {
     function LandlordEntity() {
     }
     __decorate([
-        typeorm_1.PrimaryGeneratedColumn('uuid'),
+        (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
         __metadata("design:type", String)
     ], LandlordEntity.prototype, "id", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], LandlordEntity.prototype, "lastname", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], LandlordEntity.prototype, "other_names", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], LandlordEntity.prototype, "gender", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], LandlordEntity.prototype, "address", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], LandlordEntity.prototype, "phone1", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], LandlordEntity.prototype, "phone2", void 0);
     LandlordEntity = __decorate([
-        typeorm_1.Entity('landlord')
+        (0, typeorm_1.Entity)('landlord')
     ], LandlordEntity);
     return LandlordEntity;
 }());
-exports.LandlordEntity = LandlordEntity;
 //# sourceMappingURL=landloard.entity.js.map

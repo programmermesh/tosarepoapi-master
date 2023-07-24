@@ -14,11 +14,11 @@ var resident_service_1 = require("../resident/resident.service");
 var landloard_controller_1 = require("./landloard.controller");
 var landloard_entity_1 = require("./landloard.entity");
 var landloard_service_1 = require("./landloard.service");
-var LandlordModule = /** @class */ (function () {
+var LandlordModule = exports.LandlordModule = /** @class */ (function () {
     function LandlordModule() {
     }
     LandlordModule = __decorate([
-        common_1.Module({
+        (0, common_1.Module)({
             imports: [typeorm_1.TypeOrmModule.forFeature([landloard_entity_1.LandlordEntity, resident_entity_1.ResidentEntity])],
             controllers: [landloard_controller_1.LandlordController],
             providers: [landloard_service_1.LandlordService, resident_service_1.ResidentService],
@@ -26,5 +26,4 @@ var LandlordModule = /** @class */ (function () {
     ], LandlordModule);
     return LandlordModule;
 }());
-exports.LandlordModule = LandlordModule;
 //# sourceMappingURL=landloard.module.js.map

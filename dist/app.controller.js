@@ -12,15 +12,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppController = void 0;
 var common_1 = require("@nestjs/common");
 var app_service_1 = require("./app.service");
-var AppController = /** @class */ (function () {
+var AppController = exports.AppController = /** @class */ (function () {
     function AppController(appService) {
         this.appService = appService;
     }
     AppController = __decorate([
-        common_1.Controller(),
+        (0, common_1.Controller)(),
         __metadata("design:paramtypes", [app_service_1.AppService])
     ], AppController);
     return AppController;
 }());
-exports.AppController = AppController;
 //# sourceMappingURL=app.controller.js.map

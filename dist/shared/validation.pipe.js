@@ -20,7 +20,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -46,7 +46,7 @@ exports.ValidationPipe = void 0;
 var common_1 = require("@nestjs/common");
 var class_validator_1 = require("class-validator");
 var class_transformer_1 = require("class-transformer");
-var ValidationPipe = /** @class */ (function () {
+var ValidationPipe = exports.ValidationPipe = /** @class */ (function () {
     function ValidationPipe() {
     }
     ValidationPipe.prototype.transform = function (value, metadata) {
@@ -62,12 +62,12 @@ var ValidationPipe = /** @class */ (function () {
                         if (!metatype || !this.toValidate(metatype)) {
                             return [2 /*return*/, value];
                         }
-                        object = class_transformer_1.plainToClass(metatype, value);
-                        return [4 /*yield*/, class_validator_1.validate(object)];
+                        object = (0, class_transformer_1.plainToClass)(metatype, value);
+                        return [4 /*yield*/, (0, class_validator_1.validate)(object)];
                     case 1:
                         errors = _a.sent();
                         if (errors.length > 0) {
-                            throw new common_1.HttpException("Validation failed', " + this.formatErrors(errors), common_1.HttpStatus.BAD_REQUEST);
+                            throw new common_1.HttpException("Validation failed', ".concat(this.formatErrors(errors)), common_1.HttpStatus.BAD_REQUEST);
                         }
                         return [2 /*return*/, value];
                 }
@@ -94,9 +94,8 @@ var ValidationPipe = /** @class */ (function () {
         return true;
     };
     ValidationPipe = __decorate([
-        common_1.Injectable()
+        (0, common_1.Injectable)()
     ], ValidationPipe);
     return ValidationPipe;
 }());
-exports.ValidationPipe = ValidationPipe;
 //# sourceMappingURL=validation.pipe.js.map

@@ -12,11 +12,11 @@ var levy_controller_1 = require("./levy.controller");
 var levy_service_1 = require("./levy.service");
 var levy_entity_1 = require("./levy.entity");
 var typeorm_1 = require("@nestjs/typeorm");
-var LevyModule = /** @class */ (function () {
+var LevyModule = exports.LevyModule = /** @class */ (function () {
     function LevyModule() {
     }
     LevyModule = __decorate([
-        common_1.Module({
+        (0, common_1.Module)({
             imports: [typeorm_1.TypeOrmModule.forFeature([levy_entity_1.LevyEntity])],
             controllers: [levy_controller_1.LevyController],
             providers: [levy_service_1.LevyService],
@@ -24,5 +24,4 @@ var LevyModule = /** @class */ (function () {
     ], LevyModule);
     return LevyModule;
 }());
-exports.LevyModule = LevyModule;
 //# sourceMappingURL=levy.module.js.map

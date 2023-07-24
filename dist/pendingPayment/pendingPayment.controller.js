@@ -17,7 +17,7 @@ var common_1 = require("@nestjs/common");
 var pendingPayment_service_1 = require("./pendingPayment.service");
 var pendingPayment_dto_1 = require("./pendingPayment.dto");
 var swagger_1 = require("@nestjs/swagger");
-var PendingPaymentController = /** @class */ (function () {
+var PendingPaymentController = exports.PendingPaymentController = /** @class */ (function () {
     function PendingPaymentController(PendingpaymentService) {
         this.PendingpaymentService = PendingpaymentService;
         this.logger = new common_1.Logger('PendingPaymentController');
@@ -33,33 +33,32 @@ var PendingPaymentController = /** @class */ (function () {
         return this.PendingpaymentService.deletePendingPaymentById(id);
     };
     __decorate([
-        common_1.Post(),
-        swagger_1.ApiBody({ type: pendingPayment_dto_1.PendingPaymentDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)(),
+        (0, swagger_1.ApiBody)({ type: pendingPayment_dto_1.PendingPaymentDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], PendingPaymentController.prototype, "createPendingPayment", null);
     __decorate([
-        common_1.Get(),
+        (0, common_1.Get)(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
     ], PendingPaymentController.prototype, "showAllPendingPayment", null);
     __decorate([
-        common_1.Delete(':id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Delete)(':id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], PendingPaymentController.prototype, "deletePendingPaymentById", null);
     PendingPaymentController = __decorate([
-        swagger_1.ApiTags('pendingPayment'),
-        common_1.Controller('pendingPayment'),
+        (0, swagger_1.ApiTags)('pendingPayment'),
+        (0, common_1.Controller)('pendingPayment'),
         __metadata("design:paramtypes", [pendingPayment_service_1.PendingPaymentService])
     ], PendingPaymentController);
     return PendingPaymentController;
 }());
-exports.PendingPaymentController = PendingPaymentController;
 //# sourceMappingURL=pendingPayment.controller.js.map

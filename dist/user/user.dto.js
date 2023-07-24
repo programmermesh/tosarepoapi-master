@@ -12,58 +12,56 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserUP = exports.UserUPO = exports.UserRO = exports.LoginDTO = exports.UserDTO = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var UserDTO = /** @class */ (function () {
+var UserDTO = exports.UserDTO = /** @class */ (function () {
     function UserDTO() {
     }
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], UserDTO.prototype, "username", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], UserDTO.prototype, "password", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], UserDTO.prototype, "lastname", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], UserDTO.prototype, "other_names", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], UserDTO.prototype, "gender", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], UserDTO.prototype, "type", void 0);
     return UserDTO;
 }());
-exports.UserDTO = UserDTO;
-var LoginDTO = /** @class */ (function () {
+var LoginDTO = exports.LoginDTO = /** @class */ (function () {
     function LoginDTO() {
     }
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], LoginDTO.prototype, "username", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], LoginDTO.prototype, "password", void 0);
     return LoginDTO;
 }());
-exports.LoginDTO = LoginDTO;
 var UserRO = /** @class */ (function () {
     function UserRO() {
     }
@@ -76,15 +74,14 @@ var UserUPO = /** @class */ (function () {
     return UserUPO;
 }());
 exports.UserUPO = UserUPO;
-var UserUP = /** @class */ (function () {
+var UserUP = exports.UserUP = /** @class */ (function () {
     function UserUP() {
     }
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], UserUP.prototype, "password", void 0);
     return UserUP;
 }());
-exports.UserUP = UserUP;
 //# sourceMappingURL=user.dto.js.map

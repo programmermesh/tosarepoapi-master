@@ -12,20 +12,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PaymentYearDTO = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var PaymentYearDTO = /** @class */ (function () {
+var PaymentYearDTO = exports.PaymentYearDTO = /** @class */ (function () {
     function PaymentYearDTO() {
     }
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], PaymentYearDTO.prototype, "year", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], PaymentYearDTO.prototype, "levy", void 0);
     return PaymentYearDTO;
 }());
-exports.PaymentYearDTO = PaymentYearDTO;
 //# sourceMappingURL=paymentYear.dto.js.map

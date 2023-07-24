@@ -26,7 +26,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -53,7 +53,7 @@ var common_1 = require("@nestjs/common");
 var typeorm_1 = require("typeorm");
 var salon_entity_1 = require("./salon.entity");
 var typeorm_2 = require("@nestjs/typeorm");
-var SalonService = /** @class */ (function () {
+var SalonService = exports.SalonService = /** @class */ (function () {
     function SalonService(salonRepository) {
         this.salonRepository = salonRepository;
     }
@@ -190,11 +190,10 @@ var SalonService = /** @class */ (function () {
         });
     };
     SalonService = __decorate([
-        common_1.Injectable(),
-        __param(0, typeorm_2.InjectRepository(salon_entity_1.SalonEntity)),
+        (0, common_1.Injectable)(),
+        __param(0, (0, typeorm_2.InjectRepository)(salon_entity_1.SalonEntity)),
         __metadata("design:paramtypes", [typeorm_1.Repository])
     ], SalonService);
     return SalonService;
 }());
-exports.SalonService = SalonService;
 //# sourceMappingURL=salon.service.js.map

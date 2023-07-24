@@ -19,7 +19,7 @@ var levy_dto_1 = require("./levy.dto");
 var swagger_1 = require("@nestjs/swagger");
 var validation_pipe_1 = require("../shared/validation.pipe");
 var levyApartment_dto_1 = require("../shared/levyApartment.dto");
-var LevyController = /** @class */ (function () {
+var LevyController = exports.LevyController = /** @class */ (function () {
     function LevyController(levyService) {
         this.levyService = levyService;
         this.logger = new common_1.Logger('LevyController');
@@ -43,52 +43,52 @@ var LevyController = /** @class */ (function () {
         return this.levyService.deleteLevyById(id);
     };
     __decorate([
-        common_1.Post(),
-        common_1.UsePipes(new validation_pipe_1.ValidationPipe()),
-        swagger_1.ApiBody({ type: levy_dto_1.LevyDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)(),
+        (0, common_1.UsePipes)(new validation_pipe_1.ValidationPipe()),
+        (0, swagger_1.ApiBody)({ type: levy_dto_1.LevyDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [levy_dto_1.LevyDTO]),
         __metadata("design:returntype", void 0)
     ], LevyController.prototype, "createLevy", null);
     __decorate([
-        common_1.Get(),
+        (0, common_1.Get)(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
     ], LevyController.prototype, "showAllPayment", null);
     __decorate([
-        common_1.Post(':levy'),
-        swagger_1.ApiBody({ type: levyApartment_dto_1.LevyApartmentDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)(':levy'),
+        (0, swagger_1.ApiBody)({ type: levyApartment_dto_1.LevyApartmentDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [levyApartment_dto_1.LevyApartmentDTO]),
         __metadata("design:returntype", void 0)
     ], LevyController.prototype, "getLevyByApartmentType", null);
     __decorate([
-        common_1.Put(':id'),
-        common_1.UsePipes(new validation_pipe_1.ValidationPipe()),
-        swagger_1.ApiParam({ name: 'id' }),
-        swagger_1.ApiBody({ type: levy_dto_1.LevyDTO }),
-        __param(0, common_1.Param('id')), __param(1, common_1.Body()),
+        (0, common_1.Put)(':id'),
+        (0, common_1.UsePipes)(new validation_pipe_1.ValidationPipe()),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        (0, swagger_1.ApiBody)({ type: levy_dto_1.LevyDTO }),
+        __param(0, (0, common_1.Param)('id')),
+        __param(1, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object, Object]),
         __metadata("design:returntype", void 0)
     ], LevyController.prototype, "updateLevyById", null);
     __decorate([
-        common_1.Delete(':id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Delete)(':id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], LevyController.prototype, "deleteLevyById", null);
     LevyController = __decorate([
-        swagger_1.ApiTags('levy'),
-        common_1.Controller('levy'),
+        (0, swagger_1.ApiTags)('levy'),
+        (0, common_1.Controller)('levy'),
         __metadata("design:paramtypes", [levy_service_1.LevyService])
     ], LevyController);
     return LevyController;
 }());
-exports.LevyController = LevyController;
 //# sourceMappingURL=levy.controller.js.map

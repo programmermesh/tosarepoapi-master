@@ -11,7 +11,7 @@ exports.config = {
     // type: 'postgres',
     // url: 'postgres://rlybipbp:zbc4OQBbDiR2TZrtqkw-5ZfWfFf2bV20@fanny.db.elephantsql.com/rlybipbp',
     synchronize: false,
-    logging: false,
+    logging: true,
     entities: ['dist/**/**.entity{.ts,.js}'],
 };
 //# sourceMappingURL=orm.config.js.map

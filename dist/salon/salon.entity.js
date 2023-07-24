@@ -11,29 +11,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SalonEntity = void 0;
 var typeorm_1 = require("typeorm");
-var SalonEntity = /** @class */ (function () {
+var SalonEntity = exports.SalonEntity = /** @class */ (function () {
     function SalonEntity() {
     }
     __decorate([
-        typeorm_1.PrimaryGeneratedColumn('uuid'),
+        (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
         __metadata("design:type", String)
     ], SalonEntity.prototype, "id", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], SalonEntity.prototype, "hairType", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], SalonEntity.prototype, "gender", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", Number)
     ], SalonEntity.prototype, "amount", void 0);
     SalonEntity = __decorate([
-        typeorm_1.Entity('salon')
+        (0, typeorm_1.Entity)('salon')
     ], SalonEntity);
     return SalonEntity;
 }());
-exports.SalonEntity = SalonEntity;
 //# sourceMappingURL=salon.entity.js.map

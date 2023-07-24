@@ -16,11 +16,11 @@ var resident_entity_1 = require("./../resident/resident.entity");
 var resident_service_1 = require("../resident/resident.service");
 var pendingPayment_service_1 = require("../pendingPayment/pendingPayment.service");
 var pendingPayment_entity_1 = require("../pendingPayment/pendingPayment.entity");
-var PaymentModule = /** @class */ (function () {
+var PaymentModule = exports.PaymentModule = /** @class */ (function () {
     function PaymentModule() {
     }
     PaymentModule = __decorate([
-        common_1.Module({
+        (0, common_1.Module)({
             imports: [
                 typeorm_1.TypeOrmModule.forFeature([
                     payment_entity_1.PaymentEntity,
@@ -34,5 +34,4 @@ var PaymentModule = /** @class */ (function () {
     ], PaymentModule);
     return PaymentModule;
 }());
-exports.PaymentModule = PaymentModule;
 //# sourceMappingURL=payment.module.js.map

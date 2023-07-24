@@ -17,7 +17,7 @@ var common_1 = require("@nestjs/common");
 var notice_service_1 = require("./notice.service");
 var swagger_1 = require("@nestjs/swagger");
 var notice_dto_1 = require("./notice.dto");
-var NoticeController = /** @class */ (function () {
+var NoticeController = exports.NoticeController = /** @class */ (function () {
     function NoticeController(noticeService) {
         this.noticeService = noticeService;
         this.logger = new common_1.Logger('NoticeController');
@@ -40,52 +40,52 @@ var NoticeController = /** @class */ (function () {
         return this.noticeService.deleteNoticeById(id);
     };
     __decorate([
-        common_1.Post(),
-        common_1.UsePipes(new common_1.ValidationPipe()),
-        swagger_1.ApiBody({ type: notice_dto_1.NoticeDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)(),
+        (0, common_1.UsePipes)(new common_1.ValidationPipe()),
+        (0, swagger_1.ApiBody)({ type: notice_dto_1.NoticeDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], NoticeController.prototype, "createNotice", null);
     __decorate([
-        common_1.Get(),
+        (0, common_1.Get)(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
     ], NoticeController.prototype, "showAllNotice", null);
     __decorate([
-        common_1.Get(':id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Get)(':id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], NoticeController.prototype, "getNoticeById", null);
     __decorate([
-        common_1.Put(':id'),
-        common_1.UsePipes(new common_1.ValidationPipe()),
-        swagger_1.ApiParam({ name: 'id' }),
-        swagger_1.ApiBody({ type: notice_dto_1.NoticeDTO }),
-        __param(0, common_1.Param('id')), __param(1, common_1.Body()),
+        (0, common_1.Put)(':id'),
+        (0, common_1.UsePipes)(new common_1.ValidationPipe()),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        (0, swagger_1.ApiBody)({ type: notice_dto_1.NoticeDTO }),
+        __param(0, (0, common_1.Param)('id')),
+        __param(1, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object, Object]),
         __metadata("design:returntype", void 0)
     ], NoticeController.prototype, "updateNoticeById", null);
     __decorate([
-        common_1.Delete(':id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Delete)(':id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], NoticeController.prototype, "deleteNoticeById", null);
     NoticeController = __decorate([
-        swagger_1.ApiTags('notice'),
-        common_1.Controller('notice'),
+        (0, swagger_1.ApiTags)('notice'),
+        (0, common_1.Controller)('notice'),
         __metadata("design:paramtypes", [notice_service_1.NoticeService])
     ], NoticeController);
     return NoticeController;
 }());
-exports.NoticeController = NoticeController;
 //# sourceMappingURL=notice.controller.js.map

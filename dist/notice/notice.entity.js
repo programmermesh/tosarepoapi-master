@@ -11,32 +11,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NoticeEntity = void 0;
 var typeorm_1 = require("typeorm");
-var NoticeEntity = /** @class */ (function () {
+var NoticeEntity = exports.NoticeEntity = /** @class */ (function () {
     function NoticeEntity() {
     }
     __decorate([
-        typeorm_1.PrimaryGeneratedColumn('uuid'),
+        (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
         __metadata("design:type", String)
     ], NoticeEntity.prototype, "id", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], NoticeEntity.prototype, "title", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], NoticeEntity.prototype, "content", void 0);
     __decorate([
-        typeorm_1.CreateDateColumn({
+        (0, typeorm_1.CreateDateColumn)({
             type: 'timestamp',
             default: function () { return 'CURRENT_TIMESTAMP(6)'; },
         }),
         __metadata("design:type", Date)
     ], NoticeEntity.prototype, "created", void 0);
     NoticeEntity = __decorate([
-        typeorm_1.Entity('notice')
+        (0, typeorm_1.Entity)('notice')
     ], NoticeEntity);
     return NoticeEntity;
 }());
-exports.NoticeEntity = NoticeEntity;
 //# sourceMappingURL=notice.entity.js.map

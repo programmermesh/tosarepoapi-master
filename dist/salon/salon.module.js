@@ -12,11 +12,11 @@ var saloncontroller_1 = require("./saloncontroller");
 var salon_service_1 = require("./salon.service");
 var salon_entity_1 = require("./salon.entity");
 var typeorm_1 = require("@nestjs/typeorm");
-var SalonModule = /** @class */ (function () {
+var SalonModule = exports.SalonModule = /** @class */ (function () {
     function SalonModule() {
     }
     SalonModule = __decorate([
-        common_1.Module({
+        (0, common_1.Module)({
             imports: [typeorm_1.TypeOrmModule.forFeature([salon_entity_1.SalonEntity])],
             controllers: [saloncontroller_1.SalonController],
             providers: [salon_service_1.SalonService],
@@ -24,5 +24,4 @@ var SalonModule = /** @class */ (function () {
     ], SalonModule);
     return SalonModule;
 }());
-exports.SalonModule = SalonModule;
 //# sourceMappingURL=salon.module.js.map

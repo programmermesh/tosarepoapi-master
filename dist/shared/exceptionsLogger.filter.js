@@ -7,6 +7,8 @@ var __extends = (this && this.__extends) || (function () {
         return extendStatics(d, b);
     };
     return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -22,7 +24,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ExceptionsLoggerFilter = void 0;
 var common_1 = require("@nestjs/common");
 var core_1 = require("@nestjs/core");
-var ExceptionsLoggerFilter = /** @class */ (function (_super) {
+var ExceptionsLoggerFilter = exports.ExceptionsLoggerFilter = /** @class */ (function (_super) {
     __extends(ExceptionsLoggerFilter, _super);
     function ExceptionsLoggerFilter() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -32,9 +34,8 @@ var ExceptionsLoggerFilter = /** @class */ (function (_super) {
         _super.prototype.catch.call(this, exception, host);
     };
     ExceptionsLoggerFilter = __decorate([
-        common_1.Catch()
+        (0, common_1.Catch)()
     ], ExceptionsLoggerFilter);
     return ExceptionsLoggerFilter;
 }(core_1.BaseExceptionFilter));
-exports.ExceptionsLoggerFilter = ExceptionsLoggerFilter;
 //# sourceMappingURL=exceptionsLogger.filter.js.map

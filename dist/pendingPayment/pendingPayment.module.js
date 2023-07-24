@@ -14,11 +14,11 @@ var pendingPayment_entity_1 = require("./pendingPayment.entity");
 var typeorm_1 = require("@nestjs/typeorm");
 var resident_entity_1 = require("../resident/resident.entity");
 var resident_service_1 = require("../resident/resident.service");
-var PendingPaymentModule = /** @class */ (function () {
+var PendingPaymentModule = exports.PendingPaymentModule = /** @class */ (function () {
     function PendingPaymentModule() {
     }
     PendingPaymentModule = __decorate([
-        common_1.Module({
+        (0, common_1.Module)({
             imports: [typeorm_1.TypeOrmModule.forFeature([pendingPayment_entity_1.PendingPaymentEntity, resident_entity_1.ResidentEntity])],
             controllers: [pendingPayment_controller_1.PendingPaymentController],
             providers: [pendingPayment_service_1.PendingPaymentService, resident_service_1.ResidentService],
@@ -26,5 +26,4 @@ var PendingPaymentModule = /** @class */ (function () {
     ], PendingPaymentModule);
     return PendingPaymentModule;
 }());
-exports.PendingPaymentModule = PendingPaymentModule;
 //# sourceMappingURL=pendingPayment.module.js.map

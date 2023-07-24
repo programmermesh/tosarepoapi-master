@@ -12,20 +12,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.LevyApartmentDTO = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var LevyApartmentDTO = /** @class */ (function () {
+var LevyApartmentDTO = exports.LevyApartmentDTO = /** @class */ (function () {
     function LevyApartmentDTO() {
     }
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], LevyApartmentDTO.prototype, "apartmentType", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], LevyApartmentDTO.prototype, "levyType", void 0);
     return LevyApartmentDTO;
 }());
-exports.LevyApartmentDTO = LevyApartmentDTO;
 //# sourceMappingURL=levyApartment.dto.js.map

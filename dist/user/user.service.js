@@ -1,7 +1,11 @@
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -45,7 +49,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -73,7 +77,7 @@ var typeorm_1 = require("@nestjs/typeorm");
 var user_entity_1 = require("./user.entity");
 var typeorm_2 = require("typeorm");
 var bcrypt = __importStar(require("bcryptjs"));
-var UserService = /** @class */ (function () {
+var UserService = exports.UserService = /** @class */ (function () {
     function UserService(userRepository) {
         this.userRepository = userRepository;
     }
@@ -213,11 +217,10 @@ var UserService = /** @class */ (function () {
         });
     };
     UserService = __decorate([
-        common_1.Injectable(),
-        __param(0, typeorm_1.InjectRepository(user_entity_1.UserEntity)),
+        (0, common_1.Injectable)(),
+        __param(0, (0, typeorm_1.InjectRepository)(user_entity_1.UserEntity)),
         __metadata("design:paramtypes", [typeorm_2.Repository])
     ], UserService);
     return UserService;
 }());
-exports.UserService = UserService;
 //# sourceMappingURL=user.service.js.map

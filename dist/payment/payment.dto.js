@@ -12,69 +12,68 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PaymentDTO = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var PaymentDTO = /** @class */ (function () {
+var PaymentDTO = exports.PaymentDTO = /** @class */ (function () {
     function PaymentDTO() {
     }
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], PaymentDTO.prototype, "month", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], PaymentDTO.prototype, "pendingPaymentId", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], PaymentDTO.prototype, "year", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], PaymentDTO.prototype, "status", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsInt(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsInt)(),
         __metadata("design:type", Number)
     ], PaymentDTO.prototype, "amount", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], PaymentDTO.prototype, "levy", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], PaymentDTO.prototype, "houseType", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], PaymentDTO.prototype, "houseNumber", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], PaymentDTO.prototype, "fullName", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], PaymentDTO.prototype, "processed", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], PaymentDTO.prototype, "residentId", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
+        (0, swagger_1.ApiProperty)(),
         __metadata("design:type", String)
     ], PaymentDTO.prototype, "file", void 0);
     return PaymentDTO;
 }());
-exports.PaymentDTO = PaymentDTO;
 //# sourceMappingURL=payment.dto.js.map

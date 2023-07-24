@@ -14,11 +14,11 @@ var visitor_entity_1 = require("./visitor.entity");
 var typeorm_1 = require("@nestjs/typeorm");
 var user_entity_1 = require("../user/user.entity");
 var resident_entity_1 = require("../resident/resident.entity");
-var VisitorModule = /** @class */ (function () {
+var VisitorModule = exports.VisitorModule = /** @class */ (function () {
     function VisitorModule() {
     }
     VisitorModule = __decorate([
-        common_1.Module({
+        (0, common_1.Module)({
             imports: [
                 typeorm_1.TypeOrmModule.forFeature([visitor_entity_1.VisitorEntity, user_entity_1.UserEntity, resident_entity_1.ResidentEntity]),
             ],
@@ -28,5 +28,4 @@ var VisitorModule = /** @class */ (function () {
     ], VisitorModule);
     return VisitorModule;
 }());
-exports.VisitorModule = VisitorModule;
 //# sourceMappingURL=visitor.module.js.map

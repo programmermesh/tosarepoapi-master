@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HttpErrorFIlter = void 0;
 var common_1 = require("@nestjs/common");
-var HttpErrorFIlter = /** @class */ (function () {
+var HttpErrorFIlter = exports.HttpErrorFIlter = /** @class */ (function () {
     function HttpErrorFIlter() {
     }
     HttpErrorFIlter.prototype.catch = function (exception, host) {
@@ -23,13 +23,12 @@ var HttpErrorFIlter = /** @class */ (function () {
             method: request.method,
             message: exception['response'].error || exception.message || null,
         };
-        common_1.Logger.error(request.method + " " + request.url, JSON.stringify(errorResponse), 'ExceptionFilter');
+        common_1.Logger.error("".concat(request.method, " ").concat(request.url), JSON.stringify(errorResponse), 'ExceptionFilter');
         response.status(status).json(errorResponse);
     };
     HttpErrorFIlter = __decorate([
-        common_1.Catch()
+        (0, common_1.Catch)()
     ], HttpErrorFIlter);
     return HttpErrorFIlter;
 }());
-exports.HttpErrorFIlter = HttpErrorFIlter;
 //# sourceMappingURL=http.error.filter.js.map

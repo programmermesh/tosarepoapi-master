@@ -18,7 +18,7 @@ var landloard_service_1 = require("./landloard.service");
 var validation_pipe_1 = require("../shared/validation.pipe");
 var swagger_1 = require("@nestjs/swagger");
 var landloard_dto_1 = require("./landloard.dto");
-var LandlordController = /** @class */ (function () {
+var LandlordController = exports.LandlordController = /** @class */ (function () {
     function LandlordController(landlordService) {
         this.landlordService = landlordService;
         this.logger = new common_1.Logger('LandlordController');
@@ -40,51 +40,51 @@ var LandlordController = /** @class */ (function () {
         return this.landlordService.deleteLandlordById(id);
     };
     __decorate([
-        common_1.Get(),
+        (0, common_1.Get)(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", void 0)
     ], LandlordController.prototype, "showAllUsers", null);
     __decorate([
-        common_1.Get('/tenant/:landlordId'),
-        swagger_1.ApiParam({ name: 'landlordId' }),
-        __param(0, common_1.Param('landlordId')),
+        (0, common_1.Get)('/tenant/:landlordId'),
+        (0, swagger_1.ApiParam)({ name: 'landlordId' }),
+        __param(0, (0, common_1.Param)('landlordId')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [String]),
         __metadata("design:returntype", void 0)
     ], LandlordController.prototype, "showAllTenantByLandlordId", null);
     __decorate([
-        common_1.Post('createLandlord'),
-        swagger_1.ApiBody({ type: landloard_dto_1.LandlordDTO }),
-        __param(0, common_1.Body()),
+        (0, common_1.Post)('createLandlord'),
+        (0, swagger_1.ApiBody)({ type: landloard_dto_1.LandlordDTO }),
+        __param(0, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [landloard_dto_1.LandlordDTO]),
         __metadata("design:returntype", void 0)
     ], LandlordController.prototype, "register", null);
     __decorate([
-        common_1.Put(':id'),
-        common_1.UsePipes(new validation_pipe_1.ValidationPipe()),
-        swagger_1.ApiParam({ name: 'id' }),
-        swagger_1.ApiBody({ type: landloard_dto_1.LandlordDTO }),
-        __param(0, common_1.Param('id')), __param(1, common_1.Body()),
+        (0, common_1.Put)(':id'),
+        (0, common_1.UsePipes)(new validation_pipe_1.ValidationPipe()),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        (0, swagger_1.ApiBody)({ type: landloard_dto_1.LandlordDTO }),
+        __param(0, (0, common_1.Param)('id')),
+        __param(1, (0, common_1.Body)()),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object, Object]),
         __metadata("design:returntype", void 0)
     ], LandlordController.prototype, "updateRegister", null);
     __decorate([
-        common_1.Delete(':id'),
-        swagger_1.ApiParam({ name: 'id' }),
-        __param(0, common_1.Param('id')),
+        (0, common_1.Delete)(':id'),
+        (0, swagger_1.ApiParam)({ name: 'id' }),
+        __param(0, (0, common_1.Param)('id')),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", [Object]),
         __metadata("design:returntype", void 0)
     ], LandlordController.prototype, "deleteUser", null);
     LandlordController = __decorate([
-        swagger_1.ApiTags('landlords'),
-        common_1.Controller('landlords'),
+        (0, swagger_1.ApiTags)('landlords'),
+        (0, common_1.Controller)('landlords'),
         __metadata("design:paramtypes", [landloard_service_1.LandlordService])
     ], LandlordController);
     return LandlordController;
 }());
-exports.LandlordController = LandlordController;
 //# sourceMappingURL=landloard.controller.js.map

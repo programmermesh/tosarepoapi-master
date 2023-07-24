@@ -1,7 +1,11 @@
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -42,7 +46,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function verb(n) { return function (v) { return step([n, v]); }; }
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
@@ -68,7 +72,7 @@ exports.UserEntity = void 0;
 var typeorm_1 = require("typeorm");
 var bcrypt = __importStar(require("bcryptjs"));
 var jwt = __importStar(require("jsonwebtoken"));
-var UserEntity = /** @class */ (function () {
+var UserEntity = exports.UserEntity = /** @class */ (function () {
     function UserEntity() {
     }
     UserEntity.prototype.hashPassword = function () {
@@ -87,8 +91,9 @@ var UserEntity = /** @class */ (function () {
         });
     };
     UserEntity.prototype.toResponseObject = function (showToken) {
+        var _a;
         if (showToken === void 0) { showToken = true; }
-        var _a = this, id = _a.id, username = _a.username, token = _a.token, lastname = _a.lastname, other_names = _a.other_names, gender = _a.gender, type = _a.type;
+        var id = (_a = this, _a.id), username = _a.username, token = _a.token, lastname = _a.lastname, other_names = _a.other_names, gender = _a.gender, type = _a.type;
         var responseObject = {
             id: id,
             username: username,
@@ -114,50 +119,50 @@ var UserEntity = /** @class */ (function () {
     };
     Object.defineProperty(UserEntity.prototype, "token", {
         get: function () {
-            var _a = this, id = _a.id, username = _a.username;
+            var _a;
+            var id = (_a = this, _a.id), username = _a.username;
             return jwt.sign({ id: id, username: username }, process.env.SECRET, { expiresIn: '7d' });
         },
         enumerable: false,
         configurable: true
     });
     __decorate([
-        typeorm_1.PrimaryGeneratedColumn('uuid'),
+        (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
         __metadata("design:type", String)
     ], UserEntity.prototype, "id", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], UserEntity.prototype, "username", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], UserEntity.prototype, "password", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], UserEntity.prototype, "lastname", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], UserEntity.prototype, "other_names", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], UserEntity.prototype, "gender", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], UserEntity.prototype, "type", void 0);
     __decorate([
-        typeorm_1.BeforeInsert(),
+        (0, typeorm_1.BeforeInsert)(),
         __metadata("design:type", Function),
         __metadata("design:paramtypes", []),
         __metadata("design:returntype", Promise)
     ], UserEntity.prototype, "hashPassword", null);
     UserEntity = __decorate([
-        typeorm_1.Entity('user')
+        (0, typeorm_1.Entity)('user')
     ], UserEntity);
     return UserEntity;
 }());
-exports.UserEntity = UserEntity;
 //# sourceMappingURL=user.entity.js.map

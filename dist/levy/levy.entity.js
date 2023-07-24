@@ -11,29 +11,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LevyEntity = void 0;
 var typeorm_1 = require("typeorm");
-var LevyEntity = /** @class */ (function () {
+var LevyEntity = exports.LevyEntity = /** @class */ (function () {
     function LevyEntity() {
     }
     __decorate([
-        typeorm_1.PrimaryGeneratedColumn('uuid'),
+        (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
         __metadata("design:type", String)
     ], LevyEntity.prototype, "id", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], LevyEntity.prototype, "levyType", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
     ], LevyEntity.prototype, "apartmentType", void 0);
     __decorate([
-        typeorm_1.Column(),
+        (0, typeorm_1.Column)(),
         __metadata("design:type", Number)
     ], LevyEntity.prototype, "amount", void 0);
     LevyEntity = __decorate([
-        typeorm_1.Entity('levy')
+        (0, typeorm_1.Entity)('levy')
     ], LevyEntity);
     return LevyEntity;
 }());
-exports.LevyEntity = LevyEntity;
 //# sourceMappingURL=levy.entity.js.map

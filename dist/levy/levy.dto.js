@@ -12,25 +12,24 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.LevyDTO = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var LevyDTO = /** @class */ (function () {
+var LevyDTO = exports.LevyDTO = /** @class */ (function () {
     function LevyDTO() {
     }
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], LevyDTO.prototype, "levyType", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsString(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsString)(),
         __metadata("design:type", String)
     ], LevyDTO.prototype, "apartmentType", void 0);
     __decorate([
-        swagger_1.ApiProperty(),
-        class_validator_1.IsInt(),
+        (0, swagger_1.ApiProperty)(),
+        (0, class_validator_1.IsInt)(),
         __metadata("design:type", Number)
     ], LevyDTO.prototype, "amount", void 0);
     return LevyDTO;
 }());
-exports.LevyDTO = LevyDTO;
 //# sourceMappingURL=levy.dto.js.map
