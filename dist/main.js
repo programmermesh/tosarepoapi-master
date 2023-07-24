@@ -56,7 +56,11 @@ function bootstrap() {
                         .setVersion('1.0')
                         .build();
                     document = swagger_1.SwaggerModule.createDocument(app, options);
-                    swagger_1.SwaggerModule.setup('/api', app, document);
+                    swagger_1.SwaggerModule.setup('/api', app, document, {
+                        swaggerOptions: {
+                            customJs: "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.0.0/swagger-ui-bundle.js",
+                        },
+                    });
                     return [4 /*yield*/, app.listen(process.env.PORT || 3000)];
                 case 2:
                     _a.sent();
