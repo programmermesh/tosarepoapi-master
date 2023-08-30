@@ -24,6 +24,7 @@ var pendingPayment_module_1 = require("./pendingPayment/pendingPayment.module");
 var expense_income_module_1 = require("./expense-income/expense-income.module");
 var landloard_module_1 = require("./landlord/landloard.module");
 var salon_module_1 = require("./salon/salon.module");
+var transaction_module_1 = require("./transaction/transaction.module");
 var AppModule = exports.AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -40,7 +41,8 @@ var AppModule = exports.AppModule = /** @class */ (function () {
                 visitor_module_1.VisitorModule,
                 user_module_1.UserModule,
                 landloard_module_1.LandlordModule,
-                salon_module_1.SalonModule
+                salon_module_1.SalonModule,
+                transaction_module_1.TransactionModule
             ],
             controllers: [app_controller_1.AppController],
             providers: [

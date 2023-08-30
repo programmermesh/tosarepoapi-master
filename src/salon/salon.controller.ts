@@ -30,7 +30,7 @@ export class SalonController {
   }
 
   @Get()
-  showAllPayment() {
+  showAll() {
     return this.salonService.showAll();
   }
 

@@ -20,7 +20,7 @@ export class VisitorEntity {
   @Column()
   checkout: boolean;
 
-  @Column()
+  @Column({nullable: true})
   checkoutDate: Date;
 
   @Column()

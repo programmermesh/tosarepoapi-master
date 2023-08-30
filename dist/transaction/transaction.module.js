@@ -6,22 +6,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SalonModule = void 0;
+exports.TransactionModule = void 0;
 var common_1 = require("@nestjs/common");
-var salon_controller_1 = require("./salon.controller");
-var salon_service_1 = require("./salon.service");
-var salon_entity_1 = require("./salon.entity");
+var transaction_controller_1 = require("./transaction.controller");
+var transaction_service_1 = require("./transaction.service");
+var transaction_entity_1 = require("./transaction.entity");
 var typeorm_1 = require("@nestjs/typeorm");
-var SalonModule = exports.SalonModule = /** @class */ (function () {
-    function SalonModule() {
+var TransactionModule = exports.TransactionModule = /** @class */ (function () {
+    function TransactionModule() {
     }
-    SalonModule = __decorate([
+    TransactionModule = __decorate([
         (0, common_1.Module)({
-            imports: [typeorm_1.TypeOrmModule.forFeature([salon_entity_1.SalonEntity])],
-            controllers: [salon_controller_1.SalonController],
-            providers: [salon_service_1.SalonService],
+            imports: [typeorm_1.TypeOrmModule.forFeature([transaction_entity_1.TransactionEntity])],
+            controllers: [transaction_controller_1.TransactionController],
+            providers: [transaction_service_1.TransactionService],
         })
-    ], SalonModule);
-    return SalonModule;
+    ], TransactionModule);
+    return TransactionModule;
 }());
-//# sourceMappingURL=salon.module.js.map
+//# sourceMappingURL=transaction.module.js.map

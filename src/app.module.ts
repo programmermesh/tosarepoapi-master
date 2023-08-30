@@ -15,6 +15,7 @@ import { PendingPaymentModule } from './pendingPayment/pendingPayment.module';
 import { ExpenseIncomeModule } from './expense-income/expense-income.module';
 import { LandlordModule } from './landlord/landloard.module';
 import { SalonModule } from './salon/salon.module';
+import { TransactionModule } from './transaction/transaction.module';
 
 @Module({
   imports: [
@@ -28,7 +29,8 @@ import { SalonModule } from './salon/salon.module';
     VisitorModule,
     UserModule,
     LandlordModule,
-    SalonModule
+    SalonModule,
+    TransactionModule
   ],
   controllers: [AppController],
   providers: [

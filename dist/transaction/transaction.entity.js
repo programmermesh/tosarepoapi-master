@@ -9,46 +9,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.VisitorEntity = void 0;
+exports.TransactionEntity = void 0;
 var typeorm_1 = require("typeorm");
-var VisitorEntity = exports.VisitorEntity = /** @class */ (function () {
-    function VisitorEntity() {
+var TransactionEntity = exports.TransactionEntity = /** @class */ (function () {
+    function TransactionEntity() {
     }
     __decorate([
         (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
         __metadata("design:type", String)
-    ], VisitorEntity.prototype, "id", void 0);
+    ], TransactionEntity.prototype, "id", void 0);
     __decorate([
         (0, typeorm_1.Column)(),
         __metadata("design:type", String)
-    ], VisitorEntity.prototype, "name", void 0);
+    ], TransactionEntity.prototype, "hairType", void 0);
     __decorate([
         (0, typeorm_1.Column)(),
         __metadata("design:type", String)
-    ], VisitorEntity.prototype, "discription", void 0);
+    ], TransactionEntity.prototype, "gender", void 0);
     __decorate([
         (0, typeorm_1.Column)(),
-        __metadata("design:type", Boolean)
-    ], VisitorEntity.prototype, "checkin", void 0);
-    __decorate([
-        (0, typeorm_1.Column)(),
-        __metadata("design:type", Date)
-    ], VisitorEntity.prototype, "checkinDate", void 0);
-    __decorate([
-        (0, typeorm_1.Column)(),
-        __metadata("design:type", Boolean)
-    ], VisitorEntity.prototype, "checkout", void 0);
+        __metadata("design:type", Number)
+    ], TransactionEntity.prototype, "amount", void 0);
     __decorate([
         (0, typeorm_1.Column)({ nullable: true }),
-        __metadata("design:type", Date)
-    ], VisitorEntity.prototype, "checkoutDate", void 0);
-    __decorate([
-        (0, typeorm_1.Column)(),
         __metadata("design:type", String)
-    ], VisitorEntity.prototype, "residentId", void 0);
-    VisitorEntity = __decorate([
-        (0, typeorm_1.Entity)('visitor')
-    ], VisitorEntity);
-    return VisitorEntity;
+    ], TransactionEntity.prototype, "date", void 0);
+    TransactionEntity = __decorate([
+        (0, typeorm_1.Entity)('transaction')
+    ], TransactionEntity);
+    return TransactionEntity;
 }());
-//# sourceMappingURL=visitor.entity.js.map
+//# sourceMappingURL=transaction.entity.js.map

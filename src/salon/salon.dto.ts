@@ -14,3 +14,4 @@ export class SalonDTO {
   @IsInt()
   amount: number;
 }
+
